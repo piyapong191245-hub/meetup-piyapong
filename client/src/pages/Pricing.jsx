@@ -1,4 +1,4 @@
-import { PricingTable } from '@clerk/react'
+import { PricingTable } from '@clerk/clerk-react'
 import React from 'react'
 
 const Pricing = () => {

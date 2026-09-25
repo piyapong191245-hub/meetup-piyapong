@@ -1,5 +1,5 @@
 import React from 'react'
-import { SignIn, SignUp, useUser } from '@clerk/react'  
+import { SignIn, SignUp, useUser } from '@clerk/clerk-react' // 👈 เปลี่ยนบรรทัดนี้แล้ว
 import { Navigate } from 'react-router-dom'
 
 const Login = ({ mode = "login" }) => {
