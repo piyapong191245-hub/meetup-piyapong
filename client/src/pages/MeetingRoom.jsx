@@ -40,11 +40,11 @@ const MeetingRoom = () => {
   useEffect(() => {
     if (!isLoaded || !user || !meetingId) return
 
-    // ดึง Token จาก Backend (Server)
-    const fetchToken = async () => {
-      const res = await fetch(`http://localhost:5000/api/token?userId=${user.id}`)
-      const data = await res.json()
-      return data.token
+   const fetchToken = async () => {
+      const backendUrl = import.meta.env.VITE_BACKEND_URL || 'http://localhost:5000';
+      const res = await fetch(`${backendUrl}/api/token?userId=${user.id}`);
+      const data = await res.json();
+      return data.token;
     }
 
     // สร้าง Stream Client ด้วยผู้ใช้จริงจาก Clerk
